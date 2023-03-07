@@ -1,8 +1,3 @@
-/**
- * 
- * @author Bryce Younger
- */
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -19,9 +14,8 @@ import javax.swing.Timer;
 /**
  * CS 121 Project 0: Traffic Animation
  *
- * Animates a blue chevy impala driving through the desert
+ * Animates a maroon chevy impala driving through the desert on a night wth a full moon, while passing a bystander and cacti
  *
- * @author BSU CS 121 Instructors
  * @author Bryce Younger
  */
 @SuppressWarnings("serial")

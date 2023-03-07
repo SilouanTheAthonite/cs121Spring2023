@@ -1,0 +1,25 @@
+/**
+ * Lesson 9: Activity
+ * 
+ * @author CS121 Instructors
+ * @version Spring 2023
+ * @author Bryce Younger
+ */
+public class DoubleComparison
+{
+	public static void main(String[] args)
+	{
+		final double TOLERANCE = 0.0000000000000001;
+		double result = 1.0 - 0.9;
+		double expected = 0.1;
+		
+		if(Math.abs(result - expected) < TOLERANCE)
+		{
+			System.out.println("They are equal!");
+		}
+		else
+		{
+			System.out.println("They are not equal.");
+		}
+	}
+}
