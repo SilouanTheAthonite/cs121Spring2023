@@ -41,10 +41,37 @@ public class JukeboxHero {
                     try
                     {
                         File file = new File(fileInput);
+                        Scanner fileScan = new Scanner(file);
+                        Scanner lineScan = null;
+                        String line = "", artist = "", album = "", title = "", duration = "";
+                        
+                        while (fileScan.hasNext()){
+                            line = fileScan.nextLine();
 
+                            lineScan = new Scanner(line);
+
+                            lineScan.useDelimiter(",");
+
+                            artist = lineScan.next();
+                            album = lineScan.next();
+                            title = lineScan.next();
+                            duration = lineScan.next();
+
+                            Song song = new Song(artist, album, title, (Integer.parseInt(duration)));
+
+                            songList.add(song);
+
+                            lineScan.close();
+                        }
+                        for (Song a: songList)
+                        {
+                            System.out.println(a);
+                        }
                     } catch (FileNotFoundException e)
                     {
                         System.out.println("Unable to open file: " + fileInput);
+                        System.out.print("Please enter a command (press 'm' for Menu): ");
+                        command = keyboardInput.next();
                     }
 
                 case "q":
@@ -65,7 +92,7 @@ public class JukeboxHero {
 
                 default:
                     System.out.println("Invalid selection!");
-                    System.out.print("Please enter a command (press m for Menu): ");
+                    System.out.print("Please enter a command (press 'm' for Menu): ");
                     command = keyboardInput.next();
                     break;
             }
