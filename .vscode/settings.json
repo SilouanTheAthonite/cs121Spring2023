@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
+        "p2/JukeboxHero",
         "p0",
         "a2.2",
         "a2.1",
@@ -10,6 +11,6 @@
         "Activity3.4",
         "Activity3.3",
         "Activity3.1",
-        "p2/JukeboxHero"
+        "Activity6.3"
     ]
 }
