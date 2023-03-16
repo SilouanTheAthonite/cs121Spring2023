@@ -24,8 +24,13 @@ public class ToDoList implements ToDoListInterface {
         while(add && i < tasks.size())
         {
             if(task.equals(tasks.get(i))){
-                task.add(task);
+                add = false;
             }
+            i++;
+        }
+
+        if(add){
+            tasks.add(task);
         }
         
     }
