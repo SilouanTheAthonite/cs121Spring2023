@@ -46,11 +46,11 @@ public class Task implements Comparable<Task>{
         
         if(complete)
         {
-            taskStatus = "[ ] " + description + ", " + priority + ", " + category;
+            taskStatus = "[ ] " + description + ", " + priority + ", " + category + "\n";
         }
         else
         {
-            taskStatus = "[X] " + description + ", " + priority + ", " + category;
+            taskStatus = "[X] " + description + ", " + priority + ", " + category + "\n";
         }
 
         return taskStatus;

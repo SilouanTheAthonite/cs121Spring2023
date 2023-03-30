@@ -29,5 +29,21 @@ public class TaskMaster {
         task2.setPriority(20);
         System.out.println("Task 2 priority: " + task2.getPriority());
         System.out.println(task2);
+
+        // Create a new ToDoList
+        ToDoList taskList = new ToDoList(); // @keyterm, aggregation and dependency
+
+        // Add task1, and task2 to taskList using addTask(Task t)
+        taskList.addTask(task1); // @keyterm encapsulation
+        taskList.addTask(task2);
+
+        // Add another task using addTask(String description)
+        taskList.addTask("Deliver honey to Pooh bear");
+
+        // Print taskList
+        System.out.println(taskList.toString());
+
+        // Call getWork
+        System.out.println(taskList.getWork());
     }
 }
