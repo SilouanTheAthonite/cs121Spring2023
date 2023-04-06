@@ -7,7 +7,8 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Scanner;
 /**
- * 
+ * This class represents an individual post and the comments which follow. 
+ * Any time a comment is added it's appended to the post and is able to be recovered following a program restart.
  * @author Bryce Younger
  * @semester Spring 2023
  */
@@ -140,7 +141,5 @@ public class Post implements PostInterface{
     @Override
     public String getAuthor() {
         return author;
-    }
-
-    
+    }  
 }
